@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShineBright Cleaning Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .cover-photo {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      position: absolute;
+      bottom: -75px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .container {
+      max-width: 900px;
+      margin: 100px auto 50px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      background: #e0f7fa;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 5px solid #00796b;
+    }
+    .review-section {
+      background: #fff3cd;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 5px solid #ff9800;
+    }
+    .review-section a {
+      text-decoration: none;
+      color: #d84315;
+      font-weight: bold;
+    }
+    .contact-section {
+      margin-top: 30px;
+    }
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-section input,
+    .contact-section textarea {
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-section button {
+      padding: 10px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="cover-placeholder.jpg" alt="Cover Photo" class="cover-photo" id="coverPhoto">
+    <img src="profile-placeholder.jpg" alt="Profile Photo" class="profile-photo" id="profilePhoto">
+  </header>
+
+  <div class="container">
+    <h1>ShineBright Cleaning Services</h1>
+    <section class="business-profile">
+      <h2>About Us</h2>
+      <p>We are a professional cleaning company serving homes and businesses with top-notch cleaning solutions. Our experienced team is dedicated to making your space spotless and stress-free!</p>
+    </section>
+
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Residential Cleaning</li>
+        <li>Office & Commercial Cleaning</li>
+        <li>Window Cleaning</li>
+        <li>Carpet & Upholstery Cleaning</li>
+        <li>End of Lease Cleaning</li>
+      </ul>
+    </section>
+
+    <section class="upload-section">
+      <h2>Update Your Profile</h2>
+      <form>
+        <label>Upload Cover Photo:<br><input type="file" accept="image/*" onchange="previewCover(event)"></label><br><br>
+        <label>Upload Profile Photo:<br><input type="file" accept="image/*" onchange="previewProfile(event)"></label>
+      </form>
+    </section>
+
+    <section class="review-section">
+      <h2>Customer Reviews</h2>
+      <p>We value your feedback! Share your experience with ShineBright Cleaning Services on Google:</p>
+      <p><a href="https://www.google.com/search?q=ShineBright+Cleaning+Services+reviews" target="_blank">Leave a Google Review</a></p>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <form action="https://formsubmit.co/pasangwangdi49@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <h2>Find Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789012!2d144.95592761531615!3d-37.81720997975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43e3f4f8c5%3A0x123456789abcdef!2sYour%20Business%20Location!5e0!3m2!1sen!2sau!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </div>
+
+  <script>
+    function previewCover(event) {
+      const cover = document.getElementById('coverPhoto');
+      cover.src = URL.createObjectURL(event.target.files[0]);
+    }
+
+    function previewProfile(event) {
+      const profile = document.getElementById('profilePhoto');
+      profile.src = URL.createObjectURL(event.target.files[0]);
+    }
+  </script>
+</body>
+</html>
